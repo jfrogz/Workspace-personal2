@@ -1,2 +1,13 @@
 
-REGLA 1: Flexbox necesita un padre y por lo menos un hijo
+REGLAS DE ORO DE FLEXBOX
+
+	REGLA 1: Flexbox necesita un padre y por lo menos un hijo.
+	REGLA 2: El Flex Container tiene 2 ejes.
+		- Flex Container (padre)
+		- Flex Item (hijo)
+	REGLA 3: Podemos modificar el eje principal con la propiedad: flex-direction
+	
+
+Paginas de apoyo
+flexbox.help
+the-echoplex.net
