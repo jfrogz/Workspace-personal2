@@ -1,0 +1,10 @@
+
+Sistema de rejillas de Bootstrap
+	REGLA  1: Hay 3 elementos que conforman este sistema: el contenedor, las filas y columnas.
+	REGLA  2: El sistema de columnas se crea utilizando un contenedor.
+	REGLA  3: Las filas tienen que ser hijos directos del contenedor.
+	REGLA  4: Las columnas se dividen en un máximo de 12 y son hijos directos de una fila.
+	REGLA  5: Si superamos el número máximo de 12 columnas, las columnas sobrantes saltarán a la siguiente fila.
+	REGLA  6: El contenido tiene que ir dentro de las columnas.
+	REGLA  7: Se pueden definir anchuras de columnas distintias para diferentes tamaños de pantallas.
+	REGLA  8: Las clases para las columnas se heredan.
