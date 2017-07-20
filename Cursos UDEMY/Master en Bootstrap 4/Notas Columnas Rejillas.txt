@@ -8,3 +8,5 @@ Sistema de rejillas de Bootstrap
 	REGLA  6: El contenido tiene que ir dentro de las columnas.
 	REGLA  7: Se pueden definir anchuras de columnas distintias para diferentes tamaños de pantallas.
 	REGLA  8: Las clases para las columnas se heredan.
+	REGLA  9: Podemos mover columnas con offset.
+	REGLA 10: Podemos anidar COLUMNAS.
