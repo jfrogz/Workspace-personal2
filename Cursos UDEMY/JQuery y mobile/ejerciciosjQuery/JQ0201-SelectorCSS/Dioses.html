@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dioses</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+
+function inicio(){
+	//Eventos para el boton
+	$("#afrodita").click(onAfro);
+	$("#poseidon").click(onPose);
+	$("#zeus").click(onZeus);
+}
+function onAfro(){
+	//Podemos lamar a cualquier elemento HTML por medio de una clase css
+	$(".afrodita").css("border", "10px");
+	$(".afrodita").css("border-style", "solid");
+	$(".afrodita").css("border-color", "pink");
+}
+function onPose(){
+	$(".poseidon").css("border", "10px");
+	$(".poseidon").css("border-style", "solid");
+	$(".poseidon").css("border-color", "blue");
+}
+function onZeus(){
+	$(".zeus").css("border", "10px");
+	$(".zeus").css("border-style", "solid");
+	$(".zeus").css("border-color", "red");
+}
+</script>
+</head>
+
+<body>
+<input type="button" id="poseidon" value="Dios del mar">
+<input type="button" id="afrodita" value="Diosa del amor">
+<input type="button" id="zeus" value="Dios de los dioses">
+<br>
+<img src="../imagenes/afrodita208x312.jpg" class="afrodita"/>
+<img src="../imagenes/poseidon220x211.jpg" class="poseidon"/>
+<img src="../imagenes/zeus174x290.jpg" class="zeus"/>
+</body>
+</html>

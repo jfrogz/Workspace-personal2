@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ036-Append</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+var i=0;
+var ii=0;
+var poema = new Array();
+poema.push("EN EL AGUA CLARA");
+poema.push("QUE BROTA EN LA FUENTE");
+poema.push("UN LINDO PESCADO");
+poema.push("SALE DE REPENTE");
+poema.push("LINDO PESCADITO");
+poema.push("¿NO QUIERES VENIR?");
+poema.push("A JUGAR CON MI ARO");
+poema.push("VAMOS AL JARDIN");
+
+function inicio(){
+	$("#boton1").click(onTexto);
+	$("#boton2").click(onLista);
+}
+function onTexto(){
+	if(i<poema.length){
+		$("p").append(poema[i]+"<br>");
+		i++;
+	}
+}
+function onLista(){
+	$("ol").append("<li>"+poema[ii]+"</li>");
+	ii++;
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="Añadir texto" id="boton1"/>
+<input type="button" value="Añadir lista" id="boton2"/>
+<p></p>
+<ol></ol>
+</body>
+</html>

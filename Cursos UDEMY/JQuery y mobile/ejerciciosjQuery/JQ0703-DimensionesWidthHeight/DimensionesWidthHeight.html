@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ044-Dimensiones Width Height</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){	
+	$("#chica").click(onChica);
+	$("#mediana").click(onMediana);
+	$("#grande").click(onGrande);
+}
+function onChica(){
+	$("#afro").width(400).height(251);	
+}
+function onMediana(){
+	$("#afro").width(800).height(502);	
+}
+function onGrande(){
+	$("#afro").width(1200).height(754);	
+}
+</script>
+</head>
+
+<body>
+<input type="button" id="chica" value="Chica">
+<input type="button" id="mediana" value="Mediana">
+<input type="button" id="grande" value="Grande">
+<br>
+<img id="afro" src="../imagenes/afrodita.jpg"/>
+<p></p>
+</body>
+</html>

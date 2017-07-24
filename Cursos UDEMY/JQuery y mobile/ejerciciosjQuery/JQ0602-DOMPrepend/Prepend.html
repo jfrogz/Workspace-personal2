@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ037-prepend</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+var poema = new Array();
+poema.push("EN EL AGUA CLARA");
+poema.push("QUE BROTA EN LA FUENTE");
+poema.push("UN LINDO PESCADO");
+poema.push("SALE DE REPENTE");
+poema.push("LINDO PESCADITO");
+poema.push("¿NO QUIERES VENIR?");
+poema.push("A JUGAR CON MI ARO");
+poema.push("VAMOS AL JARDIN");
+var i=poema.length-1;
+var ii=i;
+function inicio(){
+	$("#boton1").click(onTexto);
+	$("#boton2").click(onLista);
+}
+function onTexto(){
+	if(i>=0){
+		$("p").prepend(poema[i]+"<br>");
+		i--;
+	}
+}
+function onLista(){
+	if(ii>=0){
+		$("ol").prepend("<li>"+poema[ii]+"</li>");
+		ii--;
+	}
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="Añadir texto" id="boton1"/>
+<input type="button" value="Añadir lista" id="boton2"/>
+<p></p>
+<ol></ol>
+</body>
+</html>

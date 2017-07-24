@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.rojo{ color:red; }
+			
+		</style>
+
+		<title>HTML</title>
+		<script src="../js/jquery-1.9.1.js"></script>
+		<script>
+			$(document).ready(inicio);
+			function inicio(){
+				$("#hola").click(resalta)
+			}
+			function resalta(){
+				$("#hola").css("color", "red");
+				$("#hola").css("background-color", "yellow");
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>Hola mundo</h1>
+	</body>
+</html>

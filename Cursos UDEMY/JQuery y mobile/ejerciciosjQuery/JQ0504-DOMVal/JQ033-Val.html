@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ032-ValAnt</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){
+	//El segundo keyup() es para que refresque la caja
+	$("input").keyup(onTecla).keyup();
+}
+function onTecla(){
+	//val() recupera y modifica el contenido de una caja de entrada "input"
+	var t = $("input").val();
+	t = t.toUpperCase();	
+	$("p").text(t);
+}
+</script>
+</head>
+
+<body>
+	<input type="text" value="Hola">
+	<p></p>
+</body>
+</html>

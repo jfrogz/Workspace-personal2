@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jQuery/jquery.js"></script>
+    <script language="JavaScript" type="text/javascript">
+        $(document).ready(inicio);
+        function inicio() {
+            $("#desaparecer").click(onDesaparecer);
+            $("#dioses").click(onDioses);
+            $("#diosas").click(onDiosas);
+            $("#reyes").click(onReyes);
+            $("#semidioses").click(onSemidioses);
+        }
+        function onDesaparecer() {
+           // $("*").hide(10);
+            $("*").css("opacity", ".8");
+        }
+        function onDioses() {
+            $("img[title='dios']").css("border", "16px");
+            $("img[title='dios']").css("border-style", "solid");
+            $("img[title='dios']").css("border-color", "orange");
+        }
+        function onDiosas() {
+            $("img[title='diosa']").css("border", "16px");
+            $("img[title='diosa']").css("border-style", "solid");
+            $("img[title='diosa']").css("border-color", "pink");
+        }
+        function onReyes() {
+            $("img[title='rey']").css("border", "16px");
+            $("img[title='rey']").css("border-style", "solid");
+            $("img[title='rey']").css("border-color", "red");
+        }
+        function onSemidioses() {
+            $("img[title='semidios']").css("border", "16px");
+            $("img[title='semidios']").css("border-style", "solid");
+            $("img[title='semidios']").css("border-color", "blue");
+        }
+    </script>
+</head>
+<body>
+    <img src="../imagenes/afrodita160x196.jpg" width="160" height="196" title="diosa"/>
+    <img src="../imagenes/atenea160x196.jpg" width="160" height="196" title="diosa"/>
+    <img src="../imagenes/damocles.jpg" width="160" height="196" title="rey"/>
+    <img src="../imagenes/diogenes.jpg" width="160" height="196" title="rey"/>
+    <img src="../imagenes/hades160x196.jpg" width="160" height="196" title="dios"/>
+    <img src="../imagenes/hercules.jpg" width="160" height="196" title="semidios"/>
+    <img src="../imagenes/poseidon3.jpg" width="160" height="196" title="dios"/>
+    <img src="../imagenes/zeus174x290.jpg" width="160" height="196" title="dios"/>
+    <br />
+    <input type="button" id="dioses" value="Dioses"/>
+    <input type="button" id="diosas" value="Diosas"/>
+    <input type="button" id="reyes" value="Reyes"/>
+    <input type="button" id="semidioses" value="Semidioses"/>
+    <input type="button" id="desaparecer" value="Desaparecer"/>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ049-Get</title>
+<script src="../js/jquery.js"></script>
+<script>
+/********************************************
+Este ejemplo solo funciona en un servidor web
+*********************************************/
+$(document).ready(inicio);
+function inicio(){	
+	$("#popular").click(function(){
+		onLeePoema(0);
+	});
+	$("#clasico").click(function(){
+		onLeePoema(1);
+	});
+	$("#romantico").click(function(){
+		onLeePoema(2);
+	});
+}
+function onLeePoema(tipo){
+	//Pasamos valores
+	$.post("poemaPOST.php",{poema:tipo}, onDespliega);
+}
+function onDespliega(respuesta, estatus, xhr){
+		$("div").html(respuesta);
+};
+</script>
+</head>
+
+<body>
+<button id="popular">Poema popular</button>
+<button id="clasico">Poema Clásico</button>
+<button id="romantico">Poema Romántico</button>
+<div></div>
+</body>
+</html>

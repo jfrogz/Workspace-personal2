@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Atributos</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){
+	$("#titulo").click(onTitulo);
+	$("#chica").click(onChica);
+	$("#mediana").click(onMediana);
+	$("#grande").click(onGrande);
+}
+function onTitulo(){
+	var tt = $("img").attr("title");
+	$("#texto").text(tt);
+}
+function onChica(){
+	//el metodo attr() podemos modificar cualquier atributo
+	$("img").attr({width:"160px", height:"196px"});
+}
+function onMediana(){
+	$("img").attr({width:"320px", height:"392px"});
+}
+function onGrande(){
+	$("img").attr({width:"480px", height:"588px"});
+}
+</script>
+</head>
+
+<body>
+<input id="chica" type="button" value="Chica">
+<input id="mediana" type="button" value="Mediana">
+<input id="grande" type="button" value="Grande">
+<input id="titulo" type="button" value="Titulo">
+<br>
+<img src="../imagenes/afrodita208x312.jpg" width="160" height="196" alt="Afrodita" title="El nacimiento de Venus, William-Adolphe Bouguereau, 1879">
+<p id="texto"></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Afrodita Muestra/Oculta</title>
+<style>
+#afrodita{
+	width:800px;
+	height:502px;
+	background-image:url(imagenes/afrodita.jpg);
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+</style>
+<script src="js/jquery.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+$(document).ready(inicio);
+function inicio(){
+	$("#fadeIn").click(onFadeIn);
+	$("#fadeOut").click(onFadeOut);
+}
+function onFadeIn(){
+	$("#afrodita").fadeIn(4000);
+}
+function onFadeOut(){
+	$("#afrodita").fadeOut(4000);
+}
+</script>
+</head>
+
+<body>
+<div id="afrodita"></div>
+<input type="button" id="fadeIn" value="FadeIn"/>
+<input type="button" id="fadeOut" value="FadeOut"/>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ034-ValEscribe</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){
+	$("#normal").click(onNormal);
+	$("#secreto").click(onSecreto);
+	$("#artistico").click(onArtistico);
+}
+function onNormal(){
+	$("#nombre").val("Paco");
+	$("#apellidos").val("Loco");	
+}
+function onSecreto(){
+	$("#nombre").val("James");
+	$("#apellidos").val("Bond");	
+}
+function onArtistico(){
+	$("#nombre").val("Pato");
+	$("#apellidos").val("Lucas");	
+}
+</script>
+</head>
+
+<body>
+<input type="text" id="nombre">
+<input type="text" id="apellidos">
+<br>
+<input type="button" id="normal" value="Nombre normal">
+<input type="button" id="secreto" value="Nombre secreto">
+<input type="button" id="artistico" value="Nombre artístico">
+<p></p>
+</body>
+</html>

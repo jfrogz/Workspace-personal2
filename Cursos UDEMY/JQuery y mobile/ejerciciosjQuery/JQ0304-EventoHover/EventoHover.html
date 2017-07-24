@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Evento Hover</title>
+<style>
+#afrodita{
+	width:800px;
+	height:502px;
+	background-image:url(imagenes/afrodita2.jpg);
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){
+	$("#afrodita").hover(function(){
+		$("#afrodita").css("background-image", "url(../imagenes/afrodita.jpg)");
+	},
+	function (){
+		$("#afrodita").css("background-image", "url(../imagenes/afrodita2.jpg)");
+	});
+}
+
+</script>
+</head>
+
+<body>
+<div id="afrodita"></div>
+</body>
+</html>

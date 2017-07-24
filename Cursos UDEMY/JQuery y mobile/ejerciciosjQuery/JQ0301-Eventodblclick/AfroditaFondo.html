@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Evento dblclick</title>
+<style>
+#afrodita{
+	width:800px;
+	height:502px;
+	background-image:url(imagenes/afrodita.jpg);
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+</style>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){
+	$("#afrodita").dblclick(onCambia);	
+}
+function onCambia(){
+	$("#afrodita").css("background-image","url(imagenes/afrodita2.jpg)");	
+}
+</script>
+</head>
+<body>
+<div id="afrodita"></div>
+</body>
+</html>

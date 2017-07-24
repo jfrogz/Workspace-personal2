@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Afrodita hover</title>
+    <style>
+        #afrodita{
+            width: 800px;
+            height: 548px;
+            background-image: url(../imagenes/afrodita2.jpg) ;
+            background-repeat: no-repeat ;
+            background-size: 100% ;
+        }
+    </style>
+    <script src="../jQuery/jquery.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        $(document).ready(inicio);
+        function inicio() {
+            $("#afrodita").hover(function () {
+                $("#afrodita").css("background-image", "url(../imagenes/artemisa.jpg)")
+            }, function () {
+                $("#afrodita").css("background-image", "url(../imagenes/afrodita.jpg")
+            });
+        }
+
+    </script>
+</head>
+<body>
+<div id="afrodita"></div>
+</body>
+</html>

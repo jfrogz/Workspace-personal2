@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML</title>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(inicio);
+function inicio(){
+	$("p").click(onCambia);	
+}
+function onCambia(){
+	//html() trae todo el contenido con etiquetas
+	var tt = $(this).html();
+	$(this).text(tt);	
+}
+
+
+</script>
+</head>
+
+<body>
+<p><strong>Este</strong> es <em>un párrafo</em></p>
+<p>Este <input type="button" value="botoncito"/> no es otra cosa que código HTML</p>
+<p>Esta imagen <img src="../imagenes/animales/medusa.png"/> también es código HTML</p>
+</body>
+</html>
