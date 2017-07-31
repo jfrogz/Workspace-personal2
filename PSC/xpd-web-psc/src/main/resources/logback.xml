@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M \(%line\) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${user.home}/logs/xpd-web-psc.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>>${user.home}/logs/xpd-web-psc-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M \(%line\) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.xpd" level="DEBUG"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.springframework.jdbc.core" level="TRACE"/>
+    <logger name="org.hibernate" level="DEBUG"/>
+    <logger name="org.hsqldb" level="DEBUG"/>
+    <logger name="org.apache.coyote" level="DEBUG"/>
+    <logger name="org.apache.tomcat" level="DEBUG"/>
+    <logger name="org.junit" level="DEBUG"/>
+    <root level="DEBUG">
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
