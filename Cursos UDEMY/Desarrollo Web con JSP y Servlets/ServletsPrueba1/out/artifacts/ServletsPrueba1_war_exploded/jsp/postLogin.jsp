@@ -13,11 +13,18 @@
 <body>
     <h1>Esto es le postlogin.jsp</h1>
     <br>
-    <p>
-    <% out.println("Tu usuario es: " + request.getParameter("usuario"));
-        %>
-    <br>
-    <%= "Tu contraseña es: " + request.getParameter("contrasena")%>
+    <h1>Request</h1>
+    <%="Tu usuario es:\t" + request.getAttribute("usuario")
+    + "<br>Tu contraseña es\t" + request.getAttribute("contrasena")%>
+
+    <h1>Sesion</h1>
+    <%="Tu usuario es:\t" + session.getAttribute("usuario")
+            + "<br>Tu contraseña es:\t" + session.getAttribute("contrasena")%>
+
+    <h1>Request</h1>
+    <%="Tu usuario es:\t" + application.getAttribute("usuario")
+            + "<br>Tu contraseña es:\t" + application.getAttribute("contrasena")%>
+
 
 </body>
 </html>

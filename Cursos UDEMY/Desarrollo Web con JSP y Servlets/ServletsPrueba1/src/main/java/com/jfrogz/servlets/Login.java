@@ -1,5 +1,8 @@
 package com.jfrogz.servlets;
 
+import javax.ejb.SessionContext;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class Login extends javax.servlet.http.HttpServlet {
@@ -7,8 +10,24 @@ public class Login extends javax.servlet.http.HttpServlet {
         String accion = request.getParameter("accion");
         if (accion != null) {
             if(accion.equals("IniciarSesion")) {
-                System.out.println("Tu usuario es: \t" + request.getParameter("usuario")
-                + "\nTu constraseña es: \t" + request.getParameter("contrasena"));
+                String usuario = request.getParameter("usuario");
+                String contrasena =  request.getParameter("contrasena");
+
+                //request
+                request.setAttribute("usuario", usuario);
+                request.setAttribute("contrasena", contrasena);
+
+                //sesion
+                HttpSession sesion = request.getSession();
+                sesion.setAttribute("usuario", usuario);
+                sesion.setAttribute("contrasena", contrasena);
+
+                //contexto
+                ServletContext context = this.getServletContext();
+                context.setAttribute("usuario", usuario);
+                context.setAttribute("contrasena", contrasena);
+
+                getServletContext().getRequestDispatcher("/jsp/postLogin.jsp").forward(request, response);
             }
         } else {
             getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request, response);
