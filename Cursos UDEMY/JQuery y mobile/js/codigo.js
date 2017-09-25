@@ -7,7 +7,7 @@ function inicio() {
 
 function onDesaparece() {
     $("#afrodita").hide();
-    ion.sound.play("beer_can_opening");
+    ion.sound.play("triangle");
 }
 
 function fondo() {
@@ -19,7 +19,9 @@ ion.sound({
         {name: "beer_can_opening"},
         {name: "bell_ring"},
         {name: "branch_break"},
-        {name: "button_click"}
+        {name: "button_click"},
+        {name: "door_bell"},
+        {name: "triangle"}
     ],
 
     // main config
